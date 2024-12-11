@@ -7,6 +7,6 @@ For more information about the challenges faced and solutions found during the d
 
 - Kaggle: 
 - Dataset: 
-- To View and Try the Application: [[Hugging Face Space]](https://huggingface.co/spaces/hanifekaptan/Ikinci_El_Araba_Fiyat_Tahmini)
+- To View and Try the Application: [Hugging Face Space](https://huggingface.co/spaces/hanifekaptan/Used_Car_Price_Prediction_BC)
 
 If you have any questions or feedback about this project, please feel free to reach out!
