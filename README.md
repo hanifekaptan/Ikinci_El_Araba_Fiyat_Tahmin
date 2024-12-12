@@ -26,7 +26,6 @@ This will launch the application in your web browser.
 ## Links
 * Streamlit: [Streamlit](https://streamlit.io/)
 * Kaggle:
-* Dataset:
 
 ## Contact Information
 For any questions or feedback, feel free to contact me
