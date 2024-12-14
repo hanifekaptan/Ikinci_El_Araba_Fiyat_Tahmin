@@ -5,7 +5,7 @@ This project is designed to improve the accuracy of price predictions in the buy
 
 * **Python:** The core programming language.
 * **Streamlit:**  Used for building the interactive web application.
-* **Scikit Learn:** 
+* **Scikit Learn:**  A library used for developing machine learning models.
 
 ## Installation
 
