@@ -47,7 +47,7 @@ def price(mileage, make, model, trim, type, cylinder, liter, doors, cruise, soun
     prediction = pipe.predict(input_data)[0]
     return prediction
 
-st.title("Used Car Price Prediction red_car")
+st.title("Used Car Price Prediction :red_car:")
 st.write("Please select the car features.")
 mileage = st.number_input("Mileage", 100, 200000)
 make = st.selectbox("Brand", data["Make"].unique())
