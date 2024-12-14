@@ -10,7 +10,7 @@ import streamlit as st  # Used for deploying the model
 data = pd.read_excel("cars.xls")
 
 X = data.drop("Price", axis=1)  # Independent variable
-y = df["Price"]  # Dependent variable
+y = data["Price"]  # Dependent variable
 
 # Data preprocessing, standardization, and One-Hot Encoding
 preprocess = ColumnTransformer(
@@ -50,16 +50,16 @@ def price(mileage, make, model, trim, type, cylinder, liter, doors, cruise, soun
 st.title("Used Car Price Prediction red_car")
 st.write("Please select the car features.")
 mileage = st.number_input("Mileage", 100, 200000)
-make=st.selectbox("Marka", df["Make"].unique())
-model=st.selectbox("Model", df[df["Make"] == make]["Model"].unique())
-trim=st.selectbox("Trim", df[(df["Make"] == make) &(df["Model"] == model)]["Trim"].unique())
-car_type=st.selectbox("Type", df[(df["Make"] == make) & (df["Model"] == model) & (df["Trim"] == trim)]["Type"].unique())
-cylinder=st.selectbox("Cylinder", df["Cylinder"].unique())
-liter=st.number_input("Fuel Volume", 1, 10)
-doors=st.selectbox("Doors", df['Doors'].unique())
-cruise=st.radio("Speed Constant", [True, False])
-sound=st.radio("Sound System", [True, False])
-leather=st.radio("Leather", [True, False])
+make = st.selectbox("Marka", data["Make"].unique())
+model = st.selectbox("Model", data[data["Make"] == make]["Model"].unique())
+trim = st.selectbox("Trim", data[(df["Make"] == make) & (data["Model"] == model)]["Trim"].unique())
+car_type = st.selectbox("Type", data[(df["Make"] == make) & (data["Model"] == model) & (data["Trim"] == trim)]["Type"].unique())
+cylinder = st.selectbox("Cylinder", data["Cylinder"].unique())
+liter = st.number_input("Fuel Volume", 1, 10)
+doors = st.selectbox("Doors", data['Doors'].unique())
+cruise = st.radio("Speed Constant", [True, False])
+sound = st.radio("Sound System", [True, False])
+leather = st.radio("Leather", [True, False])
 if st.button("Prediction"):
-    pred=price(mileage, make, model, trim, car_type, cylinder, liter, doors, cruise, sound, leather)
+    pred = price(mileage, make, model, trim, car_type, cylinder, liter, doors, cruise, sound, leather)
     st.write("Price ($):", round(pred, 2))
